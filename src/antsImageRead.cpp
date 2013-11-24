@@ -15,7 +15,6 @@ namespace ants
   { 
     itk::NiftiImageIOFactory::RegisterOneFactory();
     itk::MetaImageIOFactory::RegisterOneFactory();
-    Rcpp::Rcout << " read " << filename << " ImageDim " << ImageDimension << std::endl;
     typedef itk::Image< PixelType , ImageDimension > ImageType ;
     typedef itk::ImageFileReader< ImageType >    ImageReaderType ;
     typename ImageReaderType::Pointer image_reader = ImageReaderType::New() ;
@@ -46,7 +45,7 @@ namespace ants
 } // namespace ants
 
 
-RcppExport SEXP itkImageRFunction( SEXP r_filename , SEXP r_pixeltype , SEXP r_dimension )
+RcppExport SEXP antsImageRead( SEXP r_filename , SEXP r_pixeltype , SEXP r_dimension )
 try
 {
   // check and set the parameters

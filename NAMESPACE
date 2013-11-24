@@ -1,7 +1,2 @@
 useDynLib(itkImageR)
-
-export(
-       itkImageR
-)
-
-
+exportPattern("^[[:alpha:]]+")

@@ -1,6 +1,17 @@
-
-itkImageR <- function( vec=c(1:3) ) {
-    ## Make the call...
-    val <- .Call("itkImageRFunction", vec, PACKAGE="itkImageR")
-    val
-}
+itkImageR <- function(filename, dimension, pixeltype = "float") {
+  if (class(filename) != "character" || length(filename) != 1) {
+    print("'filename' argument must be of class 'character' and have length 1")
+    return(NULL)
+  }
+  if (class(pixeltype) != "character" || length(pixeltype) != 1) {
+    print("'pixeltype' argument must be of class 'character' and have length 1")
+    return(NULL)
+  }
+  if (((class(dimension) != "numeric") && (class(dimension) != "integer")) || length(dimension) != 1) {
+    print("'dimension' argument must be of class 'numeric' and have length 1")
+    return(NULL)
+  }
+  rval <- (.Call("itkImageRFunction", filename, pixeltype, dimension, PACKAGE = "itkImageR"))
+  gc()
+  return(rval)
+} 
