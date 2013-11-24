@@ -1,0 +1,15 @@
+Package: itkImageR
+Title: Examples using Rcpp to interface R and ITK
+Version: 0.0.0
+Date: $Sun Nov 24 12:37:53 EST 2013$
+Author: Brian B. Avants
+Maintainer: Brian B. Avants <stnava@gmail.com>
+Description: Examples for Seamless R and ITKintegration via Rcpp
+Depends: R (>= 2.11.0), Rcpp (>= 0.9.9)
+LinkingTo: Rcpp
+Suggests: RUnit
+URL: https://github.com/stnava/itkImageR
+License: GPL (>= 2)
+Packaged: NA
+Repository: NA
+Date/Publication: NA
