@@ -1,2 +1,5 @@
 useDynLib(itkImageR)
-exportPattern("^[[:alpha:]]+")
+S3method(as.data.frame, antsMatrix)
+S3method(as.list, antsMatrix, antsImageRead)
+exportMethods(coerce)
+exportPattern("^[^.]")
