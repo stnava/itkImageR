@@ -12,5 +12,5 @@ PKG_CPPFLAGS=-I${myrootantsbin}/ANTS-build/ITKIOFactoryRegistration -I${myrootit
 
 libone=`find ./ANTS/ANTS-build/lib/ -name "*.dylib"`
 libtwo=`$(R_HOME)/bin/Rscript -e "Rcpp:::LdFlags()" `
-PKG_LIBS=${libone} 
-# ${libtwo}
+PKG_LIBS = ${libone} ${libtwo}
+
