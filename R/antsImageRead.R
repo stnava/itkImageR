@@ -12,6 +12,5 @@ antsImageRead <- function(filename, dimension, pixeltype = "float") {
     return(NULL)
   }
   rval <- (.Call("antsImageRead", filename, pixeltype, dimension, PACKAGE = "itkImageR"))
-  gc()
   return(rval)
 } 
